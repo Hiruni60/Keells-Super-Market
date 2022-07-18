@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="ManageProductPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="774.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageProductFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#578d5ed6" height="774.0" onKeyReleased="#textFields_Key_Released" stroke="BLACK" strokeType="INSIDE" width="833.0" />
+      <Label layoutX="253.0" layoutY="14.0" text="MANAGE PRODUCT" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+         <effect>
+            <DropShadow color="#aeb582" radius="13.11" spread="0.57" width="33.44" />
+         </effect>
+      </Label>
+      <Label layoutX="28.0" layoutY="95.0" text="Product ID">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="153.0" prefHeight="31.0" prefWidth="94.0" text="Name">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="88.0" text="Quantity">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="217.0" text="Category">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="153.0" prefHeight="31.0" prefWidth="62.0" text="Price">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProId" layoutX="168.0" layoutY="95.0" onAction="#proIdOnAction" onKeyReleased="#textFields_Key_Released" promptText="P00-001" />
+      <TextField fx:id="txtProName" layoutX="168.0" layoutY="153.0" onKeyReleased="#textFields_Key_Released" promptText="Apple" />
+      <TextField fx:id="txtProQty" layoutX="564.0" layoutY="88.0" onKeyReleased="#textFields_Key_Released" promptText="12345" />
+      <TextField fx:id="txtProPrice" layoutX="564.0" layoutY="153.0" onKeyReleased="#textFields_Key_Released" />
+      <ComboBox fx:id="txtProCategory" layoutX="168.0" layoutY="217.0" prefHeight="31.0" prefWidth="186.0" />
+      <Button fx:id="btnAdd" layoutX="64.0" layoutY="313.0" mnemonicParsing="false" onAction="#ProAddOnAction" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: #005707; -fx-background-radius: 35;" text="Add" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="356.0" layoutY="313.0" mnemonicParsing="false" onAction="#EditOnAction" prefHeight="42.0" prefWidth="151.0" style="-fx-background-color: #005707; -fx-background-radius: 35;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="650.0" layoutY="313.0" mnemonicParsing="false" onAction="#DeleteOnAction" opacity="0.91" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #005707; -fx-background-radius: 35;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblProduct" layoutX="69.0" layoutY="404.0" prefHeight="323.0" prefWidth="696.0">
+        <columns>
+          <TableColumn fx:id="colProId" prefWidth="111.0" text="Product ID" />
+          <TableColumn fx:id="colProName" prefWidth="182.0" text="Name" />
+            <TableColumn fx:id="colProCategory" prefWidth="163.0" text="Category" />
+            <TableColumn fx:id="colProPrice" prefWidth="163.0" text="Price" />
+            <TableColumn fx:id="colProQty" minWidth="0.0" prefWidth="76.0" text="Qty" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

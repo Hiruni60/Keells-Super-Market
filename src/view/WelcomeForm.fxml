@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="keelsContext" prefHeight="391.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#339923d4" height="399.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="701.0" />
+      <Text layoutX="103.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KEELS SUPER CENTER" wrappingWidth="548.546875">
+         <font>
+            <Font name="High Tower Text" size="48.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="MyProgress" layoutX="272.0" layoutY="270.0" prefHeight="7.0" prefWidth="131.0" progress="0.0" style="-fx-background-color: black;" />
+      <Label fx:id="Percentage" layoutX="313.0" layoutY="300.0" prefHeight="39.0" prefWidth="90.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="131.0" fitWidth="203.0" layoutX="272.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/E:/ijse/ijse60/fx/512x512bb.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

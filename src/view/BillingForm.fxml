@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="billPane" prefHeight="856.0" prefWidth="1288.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BillingFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#578c5dd5" height="862.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="1288.0" />
+      <Label layoutX="31.0" layoutY="186.0" text="Product Id">
+         <font>
+            <Font name="Bell MT Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="263.0" text="Qty">
+         <font>
+            <Font name="Bell MT Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductId" layoutX="132.0" layoutY="182.0" prefHeight="31.0" prefWidth="194.0" />
+      <TextField fx:id="txtQty" layoutX="132.0" layoutY="259.0" prefHeight="31.0" prefWidth="194.0" />
+      <Button layoutX="122.0" layoutY="333.0" mnemonicParsing="false" onAction="#AddtoCartOnAction" prefHeight="39.0" prefWidth="152.0" style="-fx-background-color: #005707; -fx-background-radius: 40;" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblOrder" layoutX="495.0" layoutY="125.0" prefHeight="208.0" prefWidth="753.0">
+         <columns>
+            <TableColumn fx:id="colProId2" prefWidth="87.0" text="Product ID" />
+            <TableColumn fx:id="colProName2" prefWidth="177.0" text="Product Name" />
+            <TableColumn fx:id="colProCategory2" prefWidth="171.0" text="Category" />
+            <TableColumn fx:id="colProPrice2" prefWidth="111.0" text="Unit Price" />
+            <TableColumn fx:id="colProQty2" minWidth="0.0" prefWidth="84.0" text="Sell Qty" />
+            <TableColumn fx:id="colTotal" prefWidth="123.0" text="Total" />
+         </columns>
+      </TableView>
+      <Label layoutX="529.0" layoutY="38.0" text="PLACE ORDER" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+         <effect>
+            <DropShadow color="#aeb582" radius="13.11" spread="0.57" width="33.44" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblProduct1" layoutX="24.0" layoutY="463.0" prefHeight="318.0" prefWidth="560.0">
+         <columns>
+            <TableColumn fx:id="colProId1" prefWidth="85.0" text="Product ID" />
+            <TableColumn fx:id="colProName1" prefWidth="167.0" text="Name" />
+            <TableColumn fx:id="colProCategory1" prefWidth="136.0" text="Category" />
+            <TableColumn fx:id="colProPrice1" prefWidth="107.0" text="Price" />
+            <TableColumn fx:id="colProQty1" minWidth="0.0" prefWidth="65.0" text="Qty" />
+         </columns>
+      </TableView>
+      <Separator layoutX="380.0" layoutY="100.0" orientation="VERTICAL" prefHeight="300.0" prefWidth="8.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000001c" height="473.0" layoutX="614.0" layoutY="359.0" stroke="BLACK" strokeType="INSIDE" width="643.0" />
+      <Button layoutX="623.0" layoutY="571.0" mnemonicParsing="false" onAction="#checktotalOnAction" prefHeight="73.0" prefWidth="273.0" style="-fx-background-color: ash; -fx-background-radius: 40;" text="Check Total" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="38.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtTotal" alignment="CENTER" layoutX="934.0" layoutY="583.0" prefHeight="49.0" prefWidth="268.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </TextField>
+      <Label layoutX="644.0" layoutY="377.0" text="Bill Id">
+         <font>
+            <Font name="Bell MT" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="1046.0" layoutY="377.0" text="Item Qty">
+         <font>
+            <Font name="Bell MT" size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBillId" alignment="CENTER" layoutX="644.0" layoutY="463.0" prefHeight="49.0" prefWidth="247.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtItemQty" alignment="CENTER" layoutX="1055.0" layoutY="437.0" prefHeight="88.0" prefWidth="126.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </TextField>
+      <Button layoutX="846.0" layoutY="740.0" mnemonicParsing="false" onAction="#printOnAction" prefHeight="49.0" prefWidth="222.0" style="-fx-background-color: #005707; -fx-background-radius: 40;" text="PRINT BILL" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font></Button>
+      <Button layoutX="1131.0" layoutY="38.0" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #005707; -fx-background-radius: 40;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="21.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="btnBack" fitHeight="47.0" fitWidth="44.0" layoutX="9.0" layoutY="11.0" onMousePressed="#BackOnMousePressed">
+         <image>
+            <Image url="file:/E:/ijse/ijse60/fx/Supermarket/src/images/back_button.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeesFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#578d5ed6" height="774.0" onKeyReleased="#textFields_Key_Released" stroke="BLACK" strokeType="INSIDE" width="833.0" />
+      <Label layoutX="240.0" layoutY="33.0" text="MANAGE EMPLOYEES" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+         <effect>
+            <DropShadow color="#aeb582" height="30.33" radius="8.445" spread="0.68" width="5.45" />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="112.0" text="Employee ID">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="173.0" text="Name">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="234.0" text="Password">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="112.0" prefHeight="31.0" prefWidth="90.0" text="Gender">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="173.0" text="Status">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmpId" layoutX="194.0" layoutY="112.0" onAction="#empidOnAction" onKeyReleased="#textFields_Key_Released" promptText="E00-001" />
+      <TextField fx:id="txtEmpName" layoutX="194.0" layoutY="173.0" onKeyReleased="#textFields_Key_Released" promptText="Employee" />
+      <TextField fx:id="txtEmpPassword" layoutX="194.0" layoutY="234.0" onKeyReleased="#textFields_Key_Released" promptText="******" />
+      <TextField fx:id="txtEmpStatus" layoutX="573.0" layoutY="173.0" onKeyReleased="#textFields_Key_Released" promptText="Salesman" />
+      <ComboBox fx:id="cmbEmpGender" layoutX="573.0" layoutY="112.0" prefHeight="31.0" prefWidth="186.0" />
+      <Button fx:id="btnAdd" layoutX="49.0" layoutY="301.0" mnemonicParsing="false" onAction="#EmpAddOnAction" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #005707; -fx-background-radius: 35;" text="Add" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="323.0" layoutY="301.0" mnemonicParsing="false" onAction="#EditOnAction" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #005707; -fx-background-radius: 35;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="589.0" layoutY="301.0" mnemonicParsing="false" onAction="#DeleteOnAction" opacity="0.91" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #005707; -fx-background-radius: 35;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblEmployee" layoutX="30.0" layoutY="375.0" prefHeight="350.0" prefWidth="761.0">
+         <columns>
+            <TableColumn fx:id="colEmpId" prefWidth="105.0" text="Emp ID" />
+            <TableColumn fx:id="colEmpName" prefWidth="194.0" text="Name" />
+            <TableColumn fx:id="colEmpPassword" prefWidth="129.0" text="Password" />
+            <TableColumn fx:id="colEmpGender" prefWidth="149.0" text="Gender" />
+            <TableColumn fx:id="colEmpStatus" prefWidth="183.0" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashboardPane" prefHeight="761.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000c7" height="775.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+      <Label fx:id="lblManageProduct" layoutX="70.0" layoutY="157.0" text="Manage Product" textFill="#26ff00">
+         <font>
+            <Font name="Cambria Math" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="253.0" text="Product Category" textFill="#26ff00">
+         <font>
+            <Font name="Cambria Math" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="449.0" text="Income Report" textFill="#26ff00">
+         <font>
+            <Font name="Cambria Math" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="349.0" text="Employees Details" textFill="#26ff00">
+         <font>
+            <Font name="Cambria Math" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="59.0" fitWidth="195.0" layoutX="76.0" layoutY="46.0">
+         <image>
+            <Image url="file:/E:/ijse/ijse60/fx/Supermarket/src/images/WhiteLogo.df012bd0.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="694.0" text="Log Out" textFill="#26ff00" underline="true">
+         <font>
+            <Font name="Cambria Math" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnManageProduct" layoutX="65.0" layoutY="157.0" mnemonicParsing="false" onAction="#ManageProductOnAction" opacity="0.0" prefHeight="38.0" prefWidth="209.0" />
+      <StackPane fx:id="ImagePane" layoutX="341.0" prefHeight="775.0" prefWidth="831.0">
+         <children>
+            <ImageView fitHeight="774.0" fitWidth="833.0">
+               <image>
+                  <Image url="file:/E:/ijse/ijse60/fx/Supermarket/src/images/146416-211207-supermarket-image.jpeg" />
+               </image>
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+      <Button fx:id="btnProductCategory" layoutX="61.0" layoutY="253.0" mnemonicParsing="false" onAction="#ProductCategoryOnAction" opacity="0.0" prefHeight="38.0" prefWidth="220.0" />
+      <Button fx:id="btnEmployeeDetails" layoutX="61.0" layoutY="349.0" mnemonicParsing="false" onAction="#EmployeeDetailsOnAction" opacity="0.0" prefHeight="38.0" prefWidth="220.0" />
+      <Button fx:id="btnIncomeReport" layoutX="70.0" layoutY="449.0" mnemonicParsing="false" onAction="#IncomeReportOnAction" opacity="0.0" prefHeight="38.0" prefWidth="209.0" />
+      <Button layoutX="28.0" layoutY="694.0" mnemonicParsing="false" onAction="#LogoutOnAction" opacity="0.0" prefHeight="38.0" prefWidth="112.0" />
+      <ImageView fx:id="btnBack" fitHeight="47.0" fitWidth="44.0" layoutX="10.0" layoutY="5.0" onMousePressed="#BackOnMousePressed">
+         <image>
+            <Image url="file:/E:/ijse/ijse60/fx/Supermarket/src/images/back_button.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
